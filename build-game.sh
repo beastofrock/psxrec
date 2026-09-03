@@ -47,7 +47,7 @@ CUE="$DISC_DIR/disc.cue"
 SYSTEM_CNF="$DISC_DIR/SYSTEM.CNF"
 
 PSXRECOMP="$ROOT/psxrecomp"
-PROJECT="$GAME_ROOT/${GAME}-recomp/${GAME}Recomp"
+PROJECT="$GAME_ROOT/${GAME}Recomp"
 
 echo
 echo "============================================================"
