@@ -6,13 +6,14 @@ set -euo pipefail
 # PSXRecomp + recomp-ui — complete local build
 # ============================================================
 
-ROOT="$HOME/ports/gamefolder"
+GAME="fifa98"
+ROOT="$HOME/ports/$GAME"
 PSXRECOMP="$ROOT/psxrecomp"
-PROJECT="$ROOT/gamefolder/gameRecomp"
+PROJECT="$ROOT/$GAME/gameRecomp"
 DISC="$ROOT/disc/disc.cue"
 
 echo "============================================================"
-echo " MyGame"
+echo " $GAME"
 echo " PSXRecomp + recomp-ui"
 echo "============================================================"
 
@@ -64,14 +65,14 @@ fi
 if [ ! -f "$PROJECT/game.toml" ]; then
 
     echo
-    echo "==> Creating Metal Gear Solid: VR Missions project..."
+    echo "==> Creating $GAME project..."
 
-    mkdir -p "$ROOT/mgsvr-recomp"
+    mkdir -p "$ROOT/$GAME-recomp"
 
     bash "$PSXRECOMP/tools/new_project_layout/setup_project.sh" \
         --disc "$DISC" \
-        --dir "$ROOT/mgsvr-recomp" \
-        --name "MGSVRRecomp" \
+        --dir "$ROOT/$GAME-recomp" \
+        --name "$GAMERecomp" \
         --enable-recomp-ui \
         --no-wizard \
         --no-netplay \
@@ -152,7 +153,7 @@ cd "$PROJECT"
 bash "$PSXRECOMP/tools/ci/build_emitters.sh"
 
 # ============================================================
-# 9. Generate Metal Gear Solid: VR Missions
+# 9. Generate $GAME
 # ============================================================
 
 echo
@@ -161,7 +162,7 @@ echo "==> Removing previous generated output..."
 rm -rf generated
 
 echo
-echo "==> Generating MGSVR..."
+echo "==> Generating $DISC ..."
 
 python3 psxrecomp/psxrecomp_cli.py generate \
     --config game.toml \
