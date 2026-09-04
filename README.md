@@ -1,7 +1,7 @@
 # psxrec
 PSX Recompilation
 
-"
+
 PSX-Recomp-Tool
 
 Project-Folder-Structure:
@@ -14,7 +14,7 @@ Project-Folder-Structure:
 /disc/disc.cue  
 /disc/extractdisc.sh  
 
-first start extractdisc
-then build-game-gui.sh
+1. ./disc/extractdisc.sh
+2. ./build-game-gui.sh  
 
-"
+
