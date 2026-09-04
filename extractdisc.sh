@@ -7,7 +7,7 @@ echo "actual file: "
 cat disc.cue
 #sudo apt update
 #sudo apt install bchunk
-bchunk disc.bin disc.cue disc
+bchunk disc01.bin disc.cue disc
 7z e disc01.iso SYSTEM.CNF SYSTEM.CNF
 cat SYSTEM.CNF
 echo "###"
