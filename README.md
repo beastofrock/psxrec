@@ -17,4 +17,6 @@ Project-Folder-Structure:
 1. ./disc/extractdisc.sh
 2. ./build-game-gui.sh  
 
+disc.cue must be altered according 
+filenames disc01.bin .. disc02.bin ...
 
