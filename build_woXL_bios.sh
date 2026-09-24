@@ -41,3 +41,5 @@ cp ../SCPH1001.BIN build-release/bios/
 ./build-release/wipeoutxl_Recompiled
 
 #--bios psxrecomp/bios/SCPH1001.BIN
+
+#bios is enabled via cfg > working
